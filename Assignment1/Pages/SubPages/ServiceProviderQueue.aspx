@@ -7,13 +7,15 @@
         <div class="card-header">Service Provider Kiosk</div>
         <div class="card-body">
             <h5 class="card-title">Welcome</h5>
-            <p class="card-text">Here you can choose to Added or Removed from a queue of a variety of differnt service providers.</p>
+            <p class="card-text">Here you can choose to Added or Removed from a queue of a variety of differnt service providers.
+                A Blank psoition means that you have not selected a queue.
+            </p>
             <div class="card-group">
                 <div class="col" style="margin-left: 10rem;">
                     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header">NCB Bank</div>
                         <div class="card-body">
-                            <h5 class="card-title">Primary card title</h5>
+                            <h5 class="card-title">NCB Service Provider</h5>
                             <p class="card-text"></p>
                             <div class="pb-3 pt-2">
                                 <asp:Button CssClass="btn btn-light btn-rounded btn-outline-success"
@@ -33,10 +35,10 @@
                     <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
                         <div class="card-header">Digicel</div>
                         <div class="card-body">
-                            <h5 class="card-title">Primary card title</h5>
+                            <h5 class="card-title">Digicel Service Provider</h5>
                             <p class="card-text"></p>
                             <div class="pb-3 pt-2">
-                                <asp:Button CssClass="btn btn-light btn-rounded btn-outline-success"
+                                <asp:Button CssClass="btn btn-light btn-rounded btn-outline-warning"
                                     ID="Digicel" runat="server" Text="Add/Remove"
                                     OnClick="btnGoToQueue_Click" />
                             </div>
@@ -55,10 +57,10 @@
                     <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
                         <div class="card-header">Automotive</div>
                         <div class="card-body">
-                            <h5 class="card-title">Primary card title</h5>
+                            <h5 class="card-title">Automotive Service Provider</h5>
                             <p class="card-text"></p>
                             <div class="pb-3 pt-2">
-                                <asp:Button CssClass="btn btn-light btn-rounded btn-outline-success"
+                                <asp:Button CssClass="btn btn-light btn-rounded btn-outline-primary"
                                     ID="Automotive" runat="server" Text="Add/Remove"
                                     OnClick="btnGoToQueue_Click" />
                             </div>
@@ -75,10 +77,10 @@
                     <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
                         <div class="card-header">Restaurant</div>
                         <div class="card-body">
-                            <h5 class="card-title">Primary card title</h5>
+                            <h5 class="card-title">Restaurant Service Provider</h5>
                             <p class="card-text"></p>
                             <div class="pb-3 pt-2">
-                                <asp:Button CssClass="btn btn-light btn-rounded btn-outline-success"
+                                <asp:Button CssClass="btn btn-light btn-rounded btn-outline-danger"
                                     ID="Restaurant" runat="server" Text="Add/Remove"
                                     OnClick="btnGoToQueue_Click" />
                             </div>
