@@ -23,6 +23,7 @@ namespace Assignment1.Pages.SubPages
 
         }
 
+        //Get User Roles
         public void GetRole(IAuthenticationManager authenticationManager)
         {
             if (!User.Identity.IsAuthenticated)
@@ -47,12 +48,14 @@ namespace Assignment1.Pages.SubPages
             }
         }
 
+        //Button Click go to queue
         protected void btnGoToQueue_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             AddRemoveFromQueue(button.Text, button.ID);
         }
 
+        //Save Customer to Queue
         public void SaveToQueue(string queueName)
         {
             using (var context = new ApplicationDbContext())
@@ -84,6 +87,7 @@ namespace Assignment1.Pages.SubPages
             }
         }
 
+        //Remove Customer From Queue
         public void RemoveFromQueue(string queueName)
         {
             using (var context = new ApplicationDbContext())
@@ -119,6 +123,7 @@ namespace Assignment1.Pages.SubPages
             Response.AppendHeader("Refresh", "2");
         }
 
+        //Get User Id
         public string getUserId()
         {
             var user = HttpContext.Current.User;
@@ -126,6 +131,7 @@ namespace Assignment1.Pages.SubPages
             return id;
         }
 
+        //Used to decide whether to add or remove a Customer from Queue
         public void AddRemoveFromQueue(string buttonIdText, string buttonId)
         {
             string id = getUserId();
@@ -163,6 +169,7 @@ namespace Assignment1.Pages.SubPages
             }
         }
 
+        //Get the Customer's number in the Queue to be displayed
         public void GetQueueNumber()
         {
             string id = getUserId();

@@ -27,6 +27,7 @@ namespace Assignment1.Pages.Admin
             
         }
 
+        //Service Provider can get users based on service they are being offered
         public void GetServiceUsers(IAuthenticationManager authenticationManager)
         {
             using (var context = new ApplicationDbContext())
@@ -58,6 +59,7 @@ namespace Assignment1.Pages.Admin
             }
         }
 
+        //Service Provider can view all its Customers
         public void ViewQueue()
         {
             using (var context = new ApplicationDbContext())
@@ -88,6 +90,8 @@ namespace Assignment1.Pages.Admin
 
             }
         }
+
+        //Service Provider can remove a Customer
         public void RemoveUserFromQueue(object sender)
         {
             string id = getUserId();
@@ -133,12 +137,13 @@ namespace Assignment1.Pages.Admin
         }
 
 
-
+        //Button operation to remove from the Queue
         protected void btnRemoveFromQueue(object sender, EventArgs e)
         {
             RemoveUserFromQueue(sender);
         }
 
+        //Button operation to view All Customers from the Queue (Based on Service Provider)
         protected void btnViewCustomerQueue(object sender, EventArgs e)
         {
             ViewQueue();
