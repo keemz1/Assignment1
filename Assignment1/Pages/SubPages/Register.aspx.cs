@@ -18,6 +18,7 @@ namespace Assignment1.Pages.SubPages
 
         }
 
+        //Register User and Appoint them a Customer Role
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             var manager = new UserManager<AppUser>(new UserStore<AppUser>(new ApplicationDbContext()));
